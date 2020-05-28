@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "justy Storybook",
+    "slug": "justy-app-bidder-storybook-app",
+    "description": "justy bidder storybook",
+    "backgroundColor":"#ffffff",
+    "privacy": "unlisted",
+    "sdkVersion": "36.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "entryPoint": "storybook/AppStorybook.js",
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "extra":{
+      "prod":{
+        "SERVER_URL": "REPLACE_ME",
+        "SERVER_USERNAME": "REPLACE_ME",
+        "SERVER_PASSWORD": "REPLACE_ME",
+        "ENVIRONMENT": "production"
+      },
+      "dev":{
+        "SERVER_URL": "http://localhost:8080",
+        "SERVER_USERNAME": "admin",
+        "SERVER_PASSWORD": "supersecret",
+        "ENVIRONMENT": "development"
+      }
+    }
+  }
+}

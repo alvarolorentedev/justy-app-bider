@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "justy bidder",
+    "slug": "justy-app-bidder",
+    "description": "app for people to bid in a job they want to take on",
+    "backgroundColor":"#ffffff",
+    "privacy": "unlisted",
+    "sdkVersion": "36.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "enabled": true,
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 15000
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.kanekotic.justy.bidder",
+      "buildNumber": "1.0.0",
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-1195732568094557~8444858546"
+      }
+    },
+    "android": {
+      "package": "com.kanekotic.justy.bidder",
+      "versionCode": 1,
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-1195732568094557~8444858546"
+      }
+    },
+    "extra":{
+      "prod":{
+        "SERVER_URL": "REPLACE_ME",
+        "SERVER_USERNAME": "REPLACE_ME",
+        "SERVER_PASSWORD": "REPLACE_ME",
+        "ENVIRONMENT": "production"
+      },
+      "dev":{
+        "SERVER_URL": "http://localhost:8080",
+        "SERVER_USERNAME": "admin",
+        "SERVER_PASSWORD": "supersecret",
+        "ENVIRONMENT": "development"
+      }
+    }
+  }
+}

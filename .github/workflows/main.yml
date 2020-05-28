@@ -1,0 +1,36 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup Node
+      uses: actions/setup-node@v1
+    - name: Install
+      run: npm install
+    - name: Test
+      run: npm test    
+    - name: Lint
+      run: npm run lint 
+    - name: Prepare App Config
+      run: node ./scripts/updateAppConfig.js
+      env:
+        SERVER_URL: ${{ secrets.SERVER_URL }}
+        SERVER_USERNAME: ${{ secrets.SERVER_USERNAME }}
+        SERVER_PASSWORD: ${{ secrets.SERVER_PASSWORD }}
+    - name: expo configure
+      uses: expo/expo-github-action@v5
+      with:
+        expo-packager: npm
+        expo-username: ${{ secrets.EXPO_CLI_USERNAME }}
+        expo-password: ${{ secrets.EXPO_CLI_PASSWORD }}
+    - name: expo publish
+      run: expo publish
+    - name: expo build android bundle
+      run: expo build:android -t app-bundle
+    - name: expo build android apk
+      run: expo build:android -t apk
