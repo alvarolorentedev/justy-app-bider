@@ -40,7 +40,8 @@
       "versionCode": 1,
       "config": {
         "googleMobileAdsAppId": "ca-app-pub-1195732568094557~8444858546"
-      }
+      },
+      "permissions": []
     },
     "extra":{
       "prod":{

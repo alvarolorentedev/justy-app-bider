@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Content, Footer, FooterTab } from 'native-base';
+import { Container, Content, Footer, FooterTab, Text } from 'native-base';
 import { observer } from 'mobx-react';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { StyleSheet, Image } from 'react-native';
@@ -35,6 +35,7 @@ export const Home: React.FC<Props> = () => {
       <Content contentContainerStyle={styles.container}>
         {/* eslint-disable-next-line global-require */}
         <Image source={require('../../assets/icon.png')} style={styles.logo} />
+        <Text>Under Construction</Text>
       </Content>
       <Footer>
         <FooterTab />
