@@ -6,6 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { AppLoading } from 'expo';
 import { Root } from 'native-base';
 import Home from './src/views/home';
+import Search from './src/views/search';
 
 const Stack = createStackNavigator();
 
@@ -42,6 +43,7 @@ export default (App) => {
             }}
           >
             <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="Search" component={Search} />
           </Stack.Navigator>
         </NavigationContainer>
       </Root>

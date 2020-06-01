@@ -75,6 +75,7 @@
     "faker": "4.1.0",
     "jest": "25.5.4",
     "jest-expo": "37.0.0",
+    "jest-react-hooks-shallow": "1.4.1",
     "prettier": "2.0.5",
     "typescript": "3.9.3"
   },

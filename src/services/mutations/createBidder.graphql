@@ -1,0 +1,1 @@
+mutation($email: String!, $password: String!){ createBidder(email: $email, password: $password) { success } }
